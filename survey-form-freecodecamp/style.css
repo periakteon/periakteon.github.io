@@ -1,0 +1,164 @@
+/* "rem" ile kastedilen "root em'dir. yani, temeldeki değerin katını belirtir */
+/* "rem"in 16px olduğunu düşünelim. buna göre, 1rem = 16; 2rem = 32 vb. */
+
+:root {
+  --yazi-tipi: 'Poppins', sans-serif; /* projenin tamamında geçerli bir "yazi-tipi" değişkeni belirledik */
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+
+  --accent-left: rgba(58, 58, 158, 0.8);
+  --accent-right: rgba(136, 136, 206, 0.7);
+
+  --size-subheading: 1.125rem;
+  --size-label: 1.125rem;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;             /* Tanımlanacak margin ve padding değerleri width ve height değerlerini etkilemesin diye */
+}
+
+body{
+  font-family: var(--yazi-tipi);      /* yukarıda belirlediğimiz "yazi-tipi" değişkenini çağırdık */
+  font-weight: 400;
+  line-height: 1.6;
+  background: linear-gradient(to right, var(--accent-left), var(--accent-right)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--color-white);
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select{
+  font-family: inherit;                 /* Aynı font kullansınlar diye body'deki font'u bu elementlere miras bıraktık (inherit) */
+}
+
+/* Özelleştirmeler */
+
+.container {
+  margin: 3.125rem auto;                /* Üstten ve alttan margin, yani boşluk verdik */ 
+}
+
+.text-center{
+  text-align: center; 
+}
+
+.description{
+  font-size: var(--size-subheading);
+  font-style: italic;
+  font-weight: 200;
+  margin: 1rem auto;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+header {
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* Form Elementleri */
+
+form {
+  background-color: var(--color-darkblue-alpha);
+  padding: 2.5rem 0.625rem;
+  margin: auto;
+  border-radius: 1rem;
+  width: 50%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.form-group p{
+  line-height: 1rem;
+  margin: 0.5rem 0.1rem;
+}
+
+.form-group p:not(:nth-child(1)) {      /* "form-gruop" div'inin ilk (1) "p" elementi HARİÇ (:not) diğerlerine margin verdik */
+  margin: 0.5rem 0;
+}
+
+.form-label {
+  font-size: var(--size-label);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  height: 2.5rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 2px solid #dddddd;
+  margin-top: 0.6rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+textarea {
+  font-size: 1.2rem;
+  padding: 0.375rem 0.75rem;
+  width: 100%;
+  height: auto;
+  border: none;
+  margin: 0.5rem 0;
+}
+
+button {
+  background-color: var(--color-green);
+  border: none;
+  cursor: pointer;
+  color: var(--color-white);
+  padding: 0.75rem;
+  font-size: var(--size-label);
+}
+
+/* Responsive. Max 1141px genişiğe sahip tüm cihaz ekranları böyle olacak */
+
+@media screen and (max-width: 1141px) {
+  form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  form {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  form {
+    padding: 0.625rem;
+  }
+
+  .form-group {
+    margin: 1rem 0;
+  }
+
+  .form-group p {
+    line-height: 1.4;
+    margin: 0.5rem 0.1rem;
+  }
+}
