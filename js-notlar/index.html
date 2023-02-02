@@ -36,18 +36,83 @@
     </blockquote>
     <hr>
 
+    <!-- Değişken Atama Bölümü-->
     <blockquote>
-      Creativity is <span class="kod">asd</span> able to connect experiences they've had and synthesize new things.
-      Creativity is jusre able to connect experiences they've had and synthesize new things.
+      <h2>Değişken Tanımlama</h2>
+      Bir değişken tanımlamak için <span class="kod">var</span> ifadesini kullanırız. <span class="kod">=</span> işaretiyle de (ki bu <span class="kod">assignment operator </span>olarak da geçer) o değişkeni saklarız.
 
       <p id="kodblok" class="kodblok">
         var myName = "Masum"
       </p>
 
+      Meselâ bu kod <span class="kod">myName</span> değişkeni oluşturur ve bu değişkene bir <span class="kod">string</span> değer olarak <span class="kod">Masum</span> atama işleminde bulunur.
+
+      <br><br>
+
+      Bir değişken oluşturduğumuzda o değere <span class="kod">initial</span> bir değer vermek zorunda da değiliz. Meselâ:
+
+      <p class="kodblok" id="kodblok">
+        var myVar;
+        <br>
+        myVar = 5;
+      </p>
+      Bu işlem <span class="kod">myVar</span> adında bir değişken oluşturur ve daha sonra bu değişkene <span class="kod">5</span> değeri atar.
+
+      <br><br>
+      Şöyle bir şey de mümkündür:
+
+      <p id="kodblok" class="kodblok">
+        var myVar;
+        <br>
+        myVar = 5;
+        <br>
+        var myNum;
+        <br>
+        myNum = myVar;
+      </p>
+
+      Bu işlemde öncelikle <span class="kod">myVar</span> adında bir değişken tanımlarız ve herhangi bir değişken atamayız, yani <span class="kod">undefined</span> şeklindedir. Daha sonra bu değişkene atama operatörü, yani <span class="kod">=</span> kullanarak <span class="kod">5</span> değerini atarız. Ardından <span class="kod">myNum</span> adında bir <span class="kod">undefined</span> değişken daha tanımlarız. Bu <span class="kod">myNum</span> değişkeninin değerini ise atama operatörü, yani <span class="kod">=</span> kullanarak <span class="kod">myVar</span>'a eşitleriz. Sonuç olarak <span class="kod">myNum</span>'un değeri de <span class="kod">5</span> olur.
+
+      <br><br>
+
+      <em>TRICKY NOT:</em> <span class="kod">a = b = c</span> gibi bir atama yapıldığında sonuç <span class="kod">c</span> değeri (en sağdaki değer) olarak döner. Çünkü önce <span class="kod">a</span> ve <span class="kod">b</span> aynı değere sahip olur, daha sonra ise bu değer <span class="kod">c</span>'ye eşit olur.
+
+      <br><br>
+
+      Değişken ismi belirlenirken <span class="kod">camelCase</span> kullanırız. Yani, ilk harf her zaman küçük olur. Diğer kelimelerin başlangıç harfleri ise büyük olur. Örnek:
+
+      <p id="kodblok" class="kodblok">
+        var camelCaseVariable;
+        <br>
+        var buDegiskenIsmiCokUzun;
+      </p>
     </blockquote>
+
     <hr>
+    <!-- "let" ve "var" farkı-->
+    <blockquote>
+      <h2><span class="kod">var</span> ve <span class="kod">let</span> Arasındaki Fark</h2>
+      <span class="kod">var</span> ile bir değişken tanımlamanın en büyük problemini bir örnek ile anlatalım:
+      <p id="kodblok" class="kodblok">
+        var filozof = "Kant";
+        <br>
+        var filozof = "Platon";
+        <br>
+        console.log(filozof);
+      </p>
 
+      Bu kodda <span class="kod">filozof</span> değişkenimizi ilk olarak <span class="kod">Kant</span> olarak tanımladık ancak daha sonra aynı <span class="kod">filozof</span> değişkenini <span class="kod">Platon</span> olarak yeniden tanımladık. Konsola bunu yazdırdığımızda bize son tanımlandığı şekliyle, yani <span class="kod">Platon</span> olarak bir çıktı verir:
+      <p class="kodblok" id="kodblok">
+        ...
+        <br>
+        console.log(filozof);
+        <br>
+        >>> Platon
+      </p>
+      ES6 (ECMAScript 6) ile birlikte yeni bir değişken tanımlama sözcüğü olarak <span class="kod">let</span> tanıtılır. <span class="kod">let</span> keywordünün tanıtılmasındaki temel amaç <span class="kod">var</span> ile tanımlanan değişkenlerde (yukarıda olduğu gibi) ortaya çıkan sorunları çözmektir.
+
+    </blockquote>
   </div>
+  <script src="index.js"></script>
 </body>
-
 </html>

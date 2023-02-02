@@ -76,6 +76,7 @@ blockquote {
 
 .kodblok {
   max-width: 50%;
+  text-align: center;
 }
 
 #kodblok {
@@ -92,12 +93,13 @@ blockquote {
 
 blockquote::before {
   font-family: Arial;
-  content: "\201C";
+  content: "\00A7";
   color: #645CBB;
-  font-size: 4em;
+  font-size: 2em;
   position: absolute;
-  left: 10px;
-  top: -5px;
+  left: 4.4rem;
+  top: 2rem;
+  text-shadow: .1em .1em .1em hsl(600 90% 90%);
 }
 
 blockquote::after {
