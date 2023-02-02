@@ -90,7 +90,7 @@ blockquote {
   background: rgba(255, 255, 255, 0.9);
 }
 
-
+/* before */
 blockquote::before {
   font-family: Arial;
   content: "\00A7";
