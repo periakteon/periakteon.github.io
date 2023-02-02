@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #b1b2ff, #aac4ff);
+  background-repeat: no-repeat;
+}
+
+hr {
+  border-style: none;
+  border-top: 5px dashed rgba(255, 255, 255, 0.4);
+  margin: 0 12.5rem;
+}
+
+h1 {
+  color: hsl(240 50% 90%);
+  font-family: 'Fugaz One', cursive;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  text-shadow: .1em .1em 0 hsl(600 50% 40%);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-family: 'Kanit', sans-serif;
+  color:#645CBB;
+  text-shadow: .1em .1em .1em hsl(600 90% 90%);
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 70%;
+  margin: 1rem auto;
+  height: 100%;
+  border: 3px solid #d2daff;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 0px 105px 45px rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: 0px 0px 105px 45px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 105px 45px rgba(255, 255, 255, 0.1);
+}
+
+blockquote {
+  border-radius: 5px;
+  font-size: 1.4em;
+  width: 94%;
+  margin: 50px auto;
+  font-family: Open Sans;
+  color: #555555;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid #645CBB;
+  line-height: 1.6;
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: justify;
+}
+
+
+.kod {
+  color: darkblue;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.kodblok {
+  max-width: 50%;
+}
+
+#kodblok {
+  padding: 1rem;
+  margin: 2rem auto;
+  word-wrap: break-word;
+  font-size: 1.2rem;
+  color: darkblue;
+  border-radius: 10px;
+  font-family: 'Source Code Pro', monospace;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+
+blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #645CBB;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -5px;
+}
+
+blockquote::after {
+  content: "";
+}
