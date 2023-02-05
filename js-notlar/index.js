@@ -1,3 +1,10 @@
+/*
+
+Quokka.js eklentisiyle ilgili olarak:
+To start/restart Quokka on an existing file, use Cmd/Ctrl + K, Q.
+
+*/
+
 // in-line yorum satırı
 
 /*
@@ -30,7 +37,24 @@ var filozof = "Kant";
 var filozof = "Platon";
 console.log(filozof);  // "var" ile en son tanımlanan "filozof" değişkeni "Platon" olduğu için sonuç "Platon" olarak döner
 
-let philosopher = "Kant";
-let philosopher = "Platon";
-console.log(philosopher); // bu ise hata verir çünkü "let" ile yalnızca tek bir kez değer atanabilir.
+// let philosopher = "Kant";
+// let philosopher = "Platon";
+// console.log(philosopher); // bu ise hata verir çünkü "let" ile yalnızca tek bir kez değer atanabilir.
 
+/* ------------------------ CONST ------------------------------- */
+
+const SABIT_DEGER = 3.14159;  // pi sayısı bir sabittir, değişmez. Sabitelerin BÜYÜK HARFLE yazılması yaygındır.
+
+/* ------------------------ ARİTMETİK İŞLEMLER ------------------------------- */
+
+const toplama = 10 + 5;
+console.log(toplama);     // 15 olarak döner
+
+const cikarma = 10 - 5;
+console.log(cikarma);     // 10 olarak döner
+
+const carpma = 10 * 5;
+console.log(carpma);      // 50 olarak döner
+
+const bolme = 10 / 5;
+console.log(bolme);       // 2 olarak döner

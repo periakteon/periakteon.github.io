@@ -39,24 +39,28 @@
     <!-- Değişken Atama Bölümü-->
     <blockquote>
       <h2>Değişken Tanımlama</h2>
-      Bir değişken tanımlamak için <span class="kod">var</span> ifadesini kullanırız. <span class="kod">=</span> işaretiyle de (ki bu <span class="kod">assignment operator </span>olarak da geçer) o değişkeni saklarız.
+      Bir değişken tanımlamak için <span class="kod">var</span> ifadesini kullanırız. <span class="kod">=</span>
+      işaretiyle de (ki bu <span class="kod">assignment operator </span>olarak da geçer) o değişkeni saklarız.
 
       <p id="kodblok" class="kodblok">
         var myName = "Masum"
       </p>
 
-      Meselâ bu kod <span class="kod">myName</span> değişkeni oluşturur ve bu değişkene bir <span class="kod">string</span> değer olarak <span class="kod">Masum</span> atama işleminde bulunur.
+      Meselâ bu kod <span class="kod">myName</span> değişkeni oluşturur ve bu değişkene bir <span
+        class="kod">string</span> değer olarak <span class="kod">Masum</span> atama işleminde bulunur.
 
       <br><br>
 
-      Bir değişken oluşturduğumuzda o değere <span class="kod">initial</span> bir değer vermek zorunda da değiliz. Meselâ:
+      Bir değişken oluşturduğumuzda o değere <span class="kod">initial</span> bir değer vermek zorunda da değiliz.
+      Meselâ:
 
       <p class="kodblok" id="kodblok">
         var myVar;
         <br>
         myVar = 5;
       </p>
-      Bu işlem <span class="kod">myVar</span> adında bir değişken oluşturur ve daha sonra bu değişkene <span class="kod">5</span> değeri atar.
+      Bu işlem <span class="kod">myVar</span> adında bir değişken oluşturur ve daha sonra bu değişkene <span
+        class="kod">5</span> değeri atar.
 
       <br><br>
       Şöyle bir şey de mümkündür:
@@ -71,15 +75,24 @@
         myNum = myVar;
       </p>
 
-      Bu işlemde öncelikle <span class="kod">myVar</span> adında bir değişken tanımlarız ve herhangi bir değişken atamayız, yani <span class="kod">undefined</span> şeklindedir. Daha sonra bu değişkene atama operatörü, yani <span class="kod">=</span> kullanarak <span class="kod">5</span> değerini atarız. Ardından <span class="kod">myNum</span> adında bir <span class="kod">undefined</span> değişken daha tanımlarız. Bu <span class="kod">myNum</span> değişkeninin değerini ise atama operatörü, yani <span class="kod">=</span> kullanarak <span class="kod">myVar</span>'a eşitleriz. Sonuç olarak <span class="kod">myNum</span>'un değeri de <span class="kod">5</span> olur.
+      Bu işlemde öncelikle <span class="kod">myVar</span> adında bir değişken tanımlarız ve herhangi bir değişken
+      atamayız, yani <span class="kod">undefined</span> şeklindedir. Daha sonra bu değişkene atama operatörü, yani <span
+        class="kod">=</span> kullanarak <span class="kod">5</span> değerini atarız. Ardından <span
+        class="kod">myNum</span> adında bir <span class="kod">undefined</span> değişken daha tanımlarız. Bu <span
+        class="kod">myNum</span> değişkeninin değerini ise atama operatörü, yani <span class="kod">=</span> kullanarak
+      <span class="kod">myVar</span>'a eşitleriz. Sonuç olarak <span class="kod">myNum</span>'un değeri de <span
+        class="kod">5</span> olur.
 
       <br><br>
 
-      <em>TRICKY NOT:</em> <span class="kod">a = b = c</span> gibi bir atama yapıldığında sonuç <span class="kod">c</span> değeri (en sağdaki değer) olarak döner. Çünkü önce <span class="kod">a</span> ve <span class="kod">b</span> aynı değere sahip olur, daha sonra ise bu değer <span class="kod">c</span>'ye eşit olur.
+      <em>TRICKY NOT:</em> <span class="kod">a = b = c</span> gibi bir atama yapıldığında sonuç <span
+        class="kod">c</span> değeri (en sağdaki değer) olarak döner. Çünkü önce <span class="kod">a</span> ve <span
+        class="kod">b</span> aynı değere sahip olur, daha sonra ise bu değer <span class="kod">c</span>'ye eşit olur.
 
       <br><br>
 
-      Değişken ismi belirlenirken <span class="kod">camelCase</span> kullanırız. Yani, ilk harf her zaman küçük olur. Diğer kelimelerin başlangıç harfleri ise büyük olur. Örnek:
+      Değişken ismi belirlenirken <span class="kod">camelCase</span> kullanırız. Yani, ilk harf her zaman küçük olur.
+      Diğer kelimelerin başlangıç harfleri ise büyük olur. Örnek:
 
       <p id="kodblok" class="kodblok">
         var camelCaseVariable;
@@ -89,6 +102,7 @@
     </blockquote>
 
     <hr>
+
     <!-- "let" ve "var" farkı-->
     <blockquote>
       <h2><span class="kod">var</span> ve <span class="kod">let</span> Arasındaki Fark</h2>
@@ -101,7 +115,10 @@
         console.log(filozof);
       </p>
 
-      Bu kodda <span class="kod">filozof</span> değişkenimizi ilk olarak <span class="kod">Kant</span> olarak tanımladık ancak daha sonra aynı <span class="kod">filozof</span> değişkenini <span class="kod">Platon</span> olarak yeniden tanımladık. Konsola bunu yazdırdığımızda bize son tanımlandığı şekliyle, yani <span class="kod">Platon</span> olarak bir çıktı verir:
+      Bu kodda <span class="kod">filozof</span> değişkenimizi ilk olarak <span class="kod">Kant</span> olarak tanımladık
+      ancak daha sonra aynı <span class="kod">filozof</span> değişkenini <span class="kod">Platon</span> olarak yeniden
+      tanımladık. Konsola bunu yazdırdığımızda bize son tanımlandığı şekliyle, yani <span class="kod">Platon</span>
+      olarak bir çıktı verir:
       <p class="kodblok" id="kodblok">
         ...
         <br>
@@ -109,10 +126,254 @@
         <br>
         >>> Platon
       </p>
-      ES6 (ECMAScript 6) ile birlikte yeni bir değişken tanımlama sözcüğü olarak <span class="kod">let</span> tanıtılır. <span class="kod">let</span> keywordünün tanıtılmasındaki temel amaç <span class="kod">var</span> ile tanımlanan değişkenlerde (yukarıda olduğu gibi) ortaya çıkan sorunları çözmektir.
-
+      ES6 (ECMAScript 6) ile birlikte yeni bir değişken tanımlama sözcüğü olarak <span class="kod">let</span> tanıtılır.
+      <span class="kod">let</span> keywordünün tanıtılmasındaki temel amaç <span class="kod">var</span> ile tanımlanan
+      değişkenlerde (yukarıda olduğu gibi) ortaya çıkan sorunları çözmektir.
     </blockquote>
+
+    <!-- CONST -->
+    <blockquote>
+      <h2><span class="kod">const</span> ile Değişken Tanımlama</h2>
+      ES6'da <span class="kod">let</span> ile bir değişken tanımlamanın yanında <span class="kod">const</span> ile
+      değişken tanımlama güncellemesi de gelmiştir. <span class="kod">let</span> ve <span class="kod">const</span> ile
+      değişken tanımlama arasındaki en büyük fark; <span class="kod">const</span> ile tanımlanan değişkenlerin
+      <strong>Bir daha değiştirilemiyor</strong> olmasıdır. Yani, <span class="kod">const</span> ile atanan değerler
+      <strong>sabittir</strong>. Yani, <em>read-only</em> şeklindedir. Meselâ şöyle bir kodu ele alalım:
+      <p id="kodblok" class="kodblok">
+        const FAV_PET = "kedi";
+        <br>
+        FAV_PET = "köpek";
+      </p>
+
+      Bu kodu çalıştırdığımızda hata alırız çünkü başta <span class="kod">const</span> ile sabit, yani <em>constant</em>
+      bir değişken tanımladık. Daha sonra ise <span class="kod">FAV_PET</span> adlı <em>sabit</em> değişkene yeniden
+      değer atamak istedik (ki bu yeni değer <span class="kod">köpek</span>tir). Ancak bu mümkün değildir çünkü <span
+        class="kod">FAV_PET</span> değişkeni <em>constant</em> hâldedir, yani değişemez.
+      <br><br>
+      <strong>NOT:</strong> Yazılımcılara arasında değişebilecek değer alan değişkenler <em>camelCase</em> şeklinde
+      tanımlanırken; sabit, yani <em>constant</em> değer alanlar ise <strong>büyük harfle</strong> başlar.
+
+      <p class="kodblok" id="kodblok">
+        const FACT = "freeCodeCamp";
+        <br>
+        let fact = "is cool!";
+        <br>
+        console.log(FACT, fact);
+        <br>
+        >>> freeCodeCamp is cool!
+      </p>
+    </blockquote>
+
+    <hr>
+
+        <!-- Aritmetik İşlemler -->
+    <blockquote>
+      <h2>Aritmetik İşlemler</h2>
+      <em>Toplama</em> işlemi yapmak için <span class="kod">+</span> operatörünü kullanırız.
+      <p id="kodblok" class="kodblok">
+        const myNum = 10 + 5;
+        <br>
+        console.log(myNum);
+        <br>
+        >>> 15
+      </p>
+      <em>Çıkarma</em> işlemi yapmak için <span class="kod">-</span> operatörünü kullanırız.
+      <p id="kodblok" class="kodblok">
+        const myNum = 10 - 5;
+        <br>
+        console.log(myNum);
+        <br>
+        >>> 5
+      </p>
+      <em>Çarpma</em> işlemi yapmak için <span class="kod">*</span> operatörünü kullanırız.
+      <p id="kodblok" class="kodblok">
+        const myNum = 10 * 5;
+        <br>
+        console.log(myNum);
+        <br>
+        >>> 50
+      </p>
+      <em>Bölme</em> işlemi yapmak için <span class="kod">-</span> operatörünü kullanırız.
+      <p id="kodblok" class="kodblok">
+        const myNum = 10 / 5;
+        <br>
+        console.log(myNum);
+        <br>
+        >>> 2
+      </p>
+      <hr>
+      <em>Increment</em>, yani sayı <em>artışı</em> yapmak için <span class="kod">++</span> operatörünü kullanırız. Bu operatör tanımlanan değişkendeki değeri <strong>1</strong> artırır, yani <strong>+1</strong> ekler.
+      <p id="kodblok" class="kodblok">
+        i++;
+      </p>
+      Bu kod aslında şu anlama gelir:
+      <p class="kodblok" id="kodblok">
+        i = i + 1;
+      </p>
+      Biz <span class="kod">i = i + 1;</span> yazmak yerine <span class="kod">i++;</span> yaparız.
+      <p class="kodblok" id="kodblok">
+        let myNum = 50;
+        <br>
+        myNum++;
+        <br>
+        console.log(myNum);
+        <br>
+        >>>51
+      </p>
+      <hr>
+      <em>Decrement</em>, yani sayı <em>eksiltme</em> yapmak için <span class="kod">--</span> operatörünü kullanırız. Bu operatör tanımlanan değişkendeki değeri <strong>1</strong> eksiltir, yani <strong>-1</strong> yapar.
+      <p id="kodblok" class="kodblok">
+        i--;
+      </p>
+      Bu kod aslında şu anlama gelir:
+      <p class="kodblok" id="kodblok">
+        i = i - 1;
+      </p>
+      Biz <span class="kod">i = i - 1;</span> yazmak yerine <span class="kod">i--;</span> yaparız.
+      <p class="kodblok" id="kodblok">
+        let myNum = 50;
+        <br>
+        myNum--;
+        <br>
+        console.log(myNum);
+        <br>
+        >>>49
+      </p>
+    </blockquote>
+
+        <!-- Ondalıklı Sayılar -->
+    <blockquote>
+      <h2>Ondalıklı Sayılar (Decimal Numbers, Floats)</h2>
+      Tamsayı olmayan kesirli (fractional) sayılar da tanımlayabiliriz.
+      <p id="kodblok" class="kodblok">
+        const decimalNum = 5.7;
+      </p>
+      <hr>
+      İki ondalıklı sayıyı <em>çarpmak</em> için <span class="kod">*</span> operatörünü kullanabiliriz.
+      <p class="kodblok" id="kodblok">
+        const product = 2.0 * 2.5;
+        <br>
+        console.log(product);
+        <br>
+        >>> 5
+      </p>
+      <hr>
+      İki ondalıklı sayıyı <em>bölmek</em> için <span class="kod">/</span> operatörünü kullanabiliriz.
+      <p class="kodblok" id="kodblok">
+        const quotient = 4.4 * 2.0;
+        <br>
+        console.log(quotient);
+        <br>
+        >>> 2.2
+      </p>
+      <hr>
+      İki ondalıklı sayıda <em>bölümden kalanı</em> bulmak için <span class="kod">%</span> operatörünü kullanabiliriz.
+      <p class="kodblok" id="kodblok">
+        const remainder = 11 % 3;
+        <br>
+        console.log(remainder);
+        <br>
+        >>> 2
+      </p>
+    </blockquote>
+
+        <!-- Compound Assignment With Augmented Addition -->
+    <blockquote>
+      <h2>Tek Bir Adımda Atama ve Artırma/Azaltma/Çarpma/Bölme</h2>
+      Normalde hem <em>değer atama (assignment)</em> hem de <em>artırma (augmentation)</em> için şöyle yapmamız gerekir:
+      <p id="kodblok" class="kodblok">
+        let myNum = 1;
+        <br>
+        myNum = myNum + 5;
+        <br>
+        console.log(myNum);
+        <br>
+        >>> 6
+      </p>
+      Ancak bu uzun sürmektedir. Tek bir adımda hem aritmetik bir işlem yapmak hem de bir atama yapmak için şöyle yapabiliriz:
+      <p class="kodblok" id="kodblok">
+        let myNum = 1;
+        <br>
+        myNum += 5;
+        <br>
+        console.log(myNum);
+        <br>
+        >>> 6
+      </p>
+      <span class="kod">+=</span> operatörünü kullanarak <span class="kod">myNum</span> değişkenine hem <em>atama (assignment)</em> hem de <em>artırma (augmentation)</em> yaptık.
+      <hr>
+      Aynı işlemi <em>azaltma/çıkarma (subtraction)</em> için de yapabiliriz. Normalde hem <em>değer atama (assignment)</em> hem de <em>azaltma/çıkarma (subtraction)</em> için şöyle yapmamız gerekir:
+      <p id="kodblok" class="kodblok">
+        let myNum = 10;
+        <br>
+        myNum = myNum - 5;
+        <br>
+        console.log(myNum);
+        <br>
+        >>> 5
+      </p>
+      Ancak bu uzun sürmektedir. Tek bir adımda hem aritmetik bir işlem yapmak hem de bir atama yapmak için şöyle yapabiliriz:
+      <p class="kodblok" id="kodblok">
+        let myNum = 10;
+        <br>
+        myNum -= 5;
+        <br>
+        console.log(myNum);
+        <br>
+        >>> 5
+      </p>
+      <span class="kod">-=</span> operatörünü kullanarak <span class="kod">myNum</span> değişkenine hem <em>atama (assignment)</em> hem de <em>azaltma/çıkarma (subtraction)</em> yaptık.
+      <hr>
+      Aynı işlemi <em>çarpma (multiplication)</em> için de yapabiliriz. Normalde hem <em>değer atama (assignment)</em> hem de <em>çarpma (multiplication)</em> için şöyle yapmamız gerekir:
+      <p id="kodblok" class="kodblok">
+        let myNum = 10;
+        <br>
+        myNum = myNum * 5;
+        <br>
+        console.log(myNum);
+        <br>
+        >>> 50
+      </p>
+      Ancak bu uzun sürmektedir. Tek bir adımda hem aritmetik bir işlem yapmak hem de bir atama yapmak için şöyle yapabiliriz:
+      <p class="kodblok" id="kodblok">
+        let myNum = 10;
+        <br>
+        myNum *= 5;
+        <br>
+        console.log(myNum);
+        <br>
+        >>> 50
+      </p>
+      <span class="kod">*=</span> operatörünü kullanarak <span class="kod">myNum</span> değişkenine hem <em>atama (assignment)</em> hem de <em>çarpma (multiplication)</em> yaptık.
+      <hr>
+      Aynı işlemi <em>bölme (division)</em> için de yapabiliriz. Normalde hem <em>değer atama (assignment)</em> hem de <em>bölme (division)</em> için şöyle yapmamız gerekir:
+      <p id="kodblok" class="kodblok">
+        let myNum = 10;
+        <br>
+        myNum = myNum / 5;
+        <br>
+        console.log(myNum);
+        <br>
+        >>> 2
+      </p>
+      Ancak bu uzun sürmektedir. Tek bir adımda hem aritmetik bir işlem yapmak hem de bir atama yapmak için şöyle yapabiliriz:
+      <p class="kodblok" id="kodblok">
+        let myNum = 10;
+        <br>
+        myNum /= 5;
+        <br>
+        console.log(myNum);
+        <br>
+        >>> 2
+      </p>
+      <span class="kod">*=</span> operatörünü kullanarak <span class="kod">myNum</span> değişkenine hem <em>atama (assignment)</em> hem de <em>bölme (division)</em> yaptık.
+    </blockquote>
+    <div class="pages">
+      <a href="2.html" class="next">Sonraki Sayfa &raquo;</a>
+    </div>
   </div>
+
   <script src="index.js"></script>
 </body>
+
 </html>
