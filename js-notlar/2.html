@@ -11,28 +11,126 @@
 
 <body>
   <div class="container">
+
     <h1>JavaScript Notlarım</h1>
     <hr>
-    <!-- "Comment" kısmı-->
+    <!-- Escaping Literal Quotes -->
     <blockquote>
-      <h2>Yorum Satırı Nasıl Eklenir?</h2>
-      JavaScript'te yorum satırı eklemenin iki yolu vardır:
+      <h2><span class="kod">String</span>lerde Literal Alıntılardan Kaçmak</h2>
+      Bir <span class="kod">string</span> türünde değişken tanımlamak için çift tırnak "..." veya tek tırnak '...' kullanırız. Ancak tanımladığımız <span class="kod">string</span> türündeki değişkenin içerisinde alıntılar varrsa veya yine tırnak kullanmamız gerekiyorsa ne yapacağız?
       <br><br>
-      I: <span class="kod">//</span> kullanarak veya,
-      <br>
-      II: <span class="kod">/* */</span> kullanarak.
-      <br><br>
-      <span class="kod">//</span> olarak kullanılan yorum satırına <span class="kod">in-line comment</span> denirken,
-      <br>
-      <span class="kod">/* */</span> olarak kullanılan yorum satırına <span class="kod">multi-line comment</span> denir.
+      Bunun için alıntının veya tırnak işaretiyle başlayan ifadenin önüne <em>backslash</em>, yani (<strong>\</strong>) ekleriz. Bu, JavaScript'e ilgili alıntının <span class="kod">string</span>in sonu olmadığını, bunun yerine <span class="kod">string</span>in içinde görünmesi gerektiğini bildirir.
       <p id="kodblok" class="kodblok">
-        // bu bir yorum satırıdır
+        const sampleStr = "Alan said, \"I'm coming\".";
         <br><br>
-        /*<br>
-        bu bir yorum satırıdır<br>
-        */
+        console.log(sampleStr);
+        <br><br>
+        >>> Alan said, "I'm coming".
+        <br><br>------------------------------------------<br><br>
+        const myStr = "I am a \"double quoted\" string inside \"double quotes\".";
+        <br><br>
+        console.log(myStr);
+        <br><br>
+        >>> I am a "double quoted" string inside "double quotes".
       </p>
+    </blockquote>
+    <hr>
 
+    <!-- Tek Tırnakla Alıntılama -->
+    <blockquote>
+      <h2><span class="kod">String</span>leri Tek Tırnakla Alıntılama</h2>
+      JavaScript'teki <span class="kod">string</span> değerleri, aynı türdeki alıntı işaretiyle başlayıp bittiği sürece tek ( '...' ) veya çift tırnak ( "..." ) ile yazılabilir. <span class="kod">< a ></span> etiketiyle başlayan <span class="kod">string</span> değerlerinde bu kullanılabilir.
+      <p id="kodblok" class="kodblok">
+        const myStr = '< a href="http://www.example.com" target="_blank"> Link < / a>';
+        <br><br>
+        console.log(myStr);
+        <br><br>
+        >>> < a href="http://www.example.com" target="_blank"> Link < / a >
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- Stringlerde Kaçış Dizileri -->
+    <blockquote>
+      <h2><span class="kod">String</span>lerde Kaçış Dizileri</h2>
+      Kaçış dizilerini kullanmanın iki nedeni vardır:
+      <br><br>
+      <strong>I)</strong> Meselâ yeni satıra geçmek gibi durumlarda veya başka türlü yazılması mümkün olunmayan durumlarda,
+      <br>
+      <strong>II)</strong> Bir <span class="kod">string</span>te çoklu alıntıya imkân sağlamak için.
+      <br><br>
+      <span>Kaçış dizelerine aşağıdaki tablodan ulaşabilirsiniz:</span>
+      <br><br>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&nbsp;\'</code></td>
+            <td>single quote</td>
+          </tr>
+          <tr>
+            <td><code>&nbsp;\"</code></td>
+            <td>double quote</td>
+          </tr>
+          <tr>
+            <td><code>\\</code></td>
+            <td>backslash</td>
+          </tr>
+          <tr>
+            <td><code>\n</code></td>
+            <td>new line</td>
+          </tr>
+          <tr>
+            <td><code>\t</code></td>
+            <td>tab</td>
+          </tr>
+          <tr>
+            <td><code>\r</code></td>
+            <td>carriage return</td>
+          </tr>
+          <tr>
+            <td><code>\b</code></td>
+            <td>word boundary</td>
+          </tr>
+          <tr>
+            <td><code>\f</code></td>
+            <td>form feed</td>
+          </tr>
+        </tbody>
+      </table>
+      <br><br>Bir örnek verelim:
+      <p id="kodblok" class="kodblok">
+        const myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+        <br><br>
+        console.log(myStr);
+        <br><br>
+        >>>
+        <br>
+        FirstLine
+        <br>
+        &emsp;\SecondLine
+        <br>
+        ThirdLine
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- + Operatörüyle Stringleri Birleştirme -->
+    <blockquote>
+      <h2><span class="kod">String</span>leri &ensp;<span class="kod">+</span> &nbsp;Operatörüyle Birleştirme</h2>
+      Stringleri birleştirmek için...
+      <p id="kodblok" class="kodblok">
+        const myStr = "as";
+        <br><br>
+        console.log(myStr);
+        <br><br>
+        >>> as
+      </p>
     </blockquote>
     <hr>
     <div class="pages">
