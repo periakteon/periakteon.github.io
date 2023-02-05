@@ -30,7 +30,7 @@ a{
 }
 
 a:hover {
-  background-color: #ddd;
+  background-color: #d2daff;
   color: black;
 }
 
@@ -123,7 +123,7 @@ blockquote hr {
 }
 
 .kodblok {
-  max-width: 50%;
+  max-width: 80%;
   text-align: center;
 }
 
@@ -152,4 +152,29 @@ blockquote::before {
 
 blockquote::after {
   content: "";
+}
+
+table {
+  margin: auto;
+  text-align: center;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+table tr, table td, table th {
+  border: 1px dashed #bbb;
+  padding: 10px 20px;
+}
+table th {
+  background-color: #645CBB;
+  color: #fff;
+  font-weight: 600;
+}
+
+table tbody tr td code {
+  background-color: #f1f1f1;
+}
+
+/* tekli sayıların arkaplan rengini değiştiriyoruz */
+table>tbody>tr:nth-child(odd)>td, table>tbody>tr:nth-child(odd)>th {
+  background-color: #dfdfe2;
 }
