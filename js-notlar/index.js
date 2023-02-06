@@ -58,3 +58,5 @@ console.log(carpma);      // 50 olarak döner
 
 const bolme = 10 / 5;
 console.log(bolme);       // 2 olarak döner
+
+let deneme = "deneme";
