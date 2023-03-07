@@ -123,13 +123,71 @@
     <!-- + Operatörüyle Stringleri Birleştirme -->
     <blockquote>
       <h2><span class="kod">String</span>leri &ensp;<span class="kod">+</span> &nbsp;Operatörüyle Birleştirme</h2>
-      Stringleri birleştirmek için...
+      <span class="kod">String</span>ler <span class="kod">+</span> operatörüyle birleştirilerek (<em>concatenating</em>) yeni <span class="kod">string</span>ler elde edilebilir.
       <p id="kodblok" class="kodblok">
-        const myStr = "as";
+        const ourStr = 'My name is Masum,' + 'I concatenate.';
+        <br><br>
+        console.log(ourStr);
+        <br><br>
+        >>> My name is Masum, I concatenate.
+      </p>
+      Birleştirme, yani <em>concatenation</em> işlemi araya boşluk <strong>eklemez</strong>. Boşluk istemek istiyorsak bunu biz eklemeliyiz. Yani,
+      <p id="kodblok" class="kodblok">
+        const ourStr = 'My name is Masum. ' + 'I concatenate.';
+        <br><br>
+        console.log(ourStr);
+        <br><br>
+        >>> My name is Masum. I concatenate.
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- += Operatörüyle Stringleri Birleştirme -->
+    <blockquote>
+      <h2><span class="kod">String</span>leri &ensp;<span class="kod">+=</span> &nbsp;Operatörüyle Birleştirme</h2>
+      <span class="kod">String</span>ler aynı zamanda <span class="kod">+=</span> operatörüyle birleştirilerek (<em>concatenating</em>) yeni <span class="kod">string</span>ler elde edilebilir.
+      <p id="kodblok" class="kodblok">
+        let ourStr = 'My name is Masum. ';
+        <br><br>
+        ourStr += "I concatenate.";
+        <br><br>
+        console.log(ourStr);
+        <br><br>
+        >>> My name is Masum. I concatenate.
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- Değişkenler ile Stringler İnşa Etmek -->
+    <blockquote>
+      <h2><span class="kod">Değişken</span>ler ile <span class="kod">String</span> İnşa Etmek</h2>
+      Birleştirme (<em>concatenating</em>), yani <span class="kod">+</span> operatörünü kullanarak inşa ettiğimiz <span class="kod">string</span>e bir ya da birden çok <span class="kod">değişken</span> ekleyebiliriz.
+      <p id="kodblok" class="kodblok">
+        const myName = "Masum";
+        <br><br>
+        const myStr = "Hello, my name is " + myName + ", how are you?";
         <br><br>
         console.log(myStr);
         <br><br>
-        >>> as
+        >>> Hello, my name is Masum, how are you?
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- Stringlere Değişkenler İliştirmek/Eklemek-->
+    <blockquote>
+      <h2><span class="kod">String</span>lere <span class="kod">Değişkenler</span> Eklemek (Append)</h2>
+      Yine <span class="kod">+=</span> operatörünü kullanarak bir <span class="kod">string</span>e <span class="kod">değişken</span>(ler) ekleyebiliriz.
+      <p id="kodblok" class="kodblok">
+        const anAdjective = "harika!";
+        <br><br>
+        let myStr = "FreeCodeCamp is ";
+        <br><br>
+        myStr += anAdjective;
+        <br><br>
+        console.log(myStr);
+        <br><br>
+        >>> FreeCodeCamp is harika!
       </p>
     </blockquote>
     <hr>
