@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>2. Sayfa / JavaScript Notlarım</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>JavaScript Notlarım</h1>
+    <hr>
+
+    <!-- Bir String'in Uzunluğunu Bulmak (Length)-->
+    <blockquote>
+      <h2>Bir <span class="kod">String</span>'in <span class="kod">Uzunluğunu</span> (Length) Bulmak</h2>
+      Bir <span class="kod">string</span>in uzunluğunu, yani <em>length</em>'ini bulmak istediğimizde o <span class="kod">string</span>'in ya da değişkenin sonuna <span class="kod">.length</span> yazmamız yeterlidir.
+      <p id="kodblok" class="kodblok">
+        let lastNameLength = 0;
+        <br><br>
+        const lastName = "Gökyüz";
+        <br><br>
+        lastNameLength = lastName.length;
+        <br><br>
+        console.log(lastNameLength);
+        <br><br>
+        >>> 6
+      </p>
+      "Masum Gökyüz" ismi aslında 5 + 6 karakterin toplamından oluşur. <strong>fakat</strong> arada <strong>boşluk</strong> vardır ve boşluk da bu toplama dahil edilir. Dolayısıyla bize <span class="kod">12</span> döner.
+      <p id="kodblok" class="kodblok">
+        console.log("Masum Gökyüz".length);
+        <br><br>
+        >>> 12
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- Footer -->
+    <div class="pages">
+      <a href="2.html" class="previous">&laquo; Önceki Sayfa</a>
+      <a href="4.html" class="next">Sonraki Sayfa &raquo;</a>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
