@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>5. Sayfa / JavaScript Notlarım</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>JavaScript Notlarım</h1>
+    <hr>
+
+    <!-- Fonksiyonlar -->
+    <blockquote>
+      <h2><span class="kod">Fonksiyonlar</span> ile Yeniden Kullanılabilir (Reusable) JavaScript Yazmak</h2>
+
+      Bir dizinin sonuna veri eklemenin (<em>append</em>) kolay bir yolu <span class="kod">push()</span> fonksiyonudur.
+      <br><br>
+      <span class="kod">.push()</span> bir veya daha fazla parametre alır ve bunları dizinin sonuna "<em>pushlar</em>".
+      <p id="kodblok" class="kodblok">
+        const arr1 = [1, 2, 3];
+        <br>
+        arr1.push(4);
+        <br>
+        console.log(arr1);
+        >>> [1, 2, 3, 4]
+        <br><br>
+        const arr2 = ["Masum", "E", "Esra"];
+        <br>
+        arr2.push(["mutlu", "evli"]);
+        <br>
+        console.log(arr2);
+        <br><br>
+        >>> ["Masum", "E", "Esra", ["mutlu", "evli"]]
+      </p>
+    </blockquote>
+    <hr>
+    <!-- Footer -->
+    <div class="pages">
+      <a href="5.html" class="previous">&laquo; Önceki Sayfa</a>
+      <a href="7.html" class="next">Sonraki Sayfa &raquo;</a>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

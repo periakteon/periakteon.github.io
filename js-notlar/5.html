@@ -19,17 +19,142 @@
     <blockquote>
       <h2><span class="kod">push</span> Metoduyla Dizileri Manipüle Etmek</h2>
 
-      (Doldurulacak)
+      Bir dizinin sonuna veri eklemenin (<em>append</em>) kolay bir yolu <span class="kod">push()</span> fonksiyonudur.
+      <br><br>
+      <span class="kod">.push()</span> bir veya daha fazla parametre alır ve bunları dizinin sonuna "<em>pushlar</em>".
       <p id="kodblok" class="kodblok">
-        const arr = ["Deneme", 1];
+        const arr1 = [1, 2, 3];
+        <br>
+        arr1.push(4);
+        <br>
+        console.log(arr1);
+        >>> [1, 2, 3, 4]
         <br><br>
-        console.log(arr[0]);
+        const arr2 = ["Masum", "E", "Esra"];
+        <br>
+        arr2.push(["mutlu", "evli"]);
+        <br>
+        console.log(arr2);
         <br><br>
-        >>> Deneme
+        >>> ["Masum", "E", "Esra", ["mutlu", "evli"]]
       </p>
     </blockquote>
     <hr>
 
+    <!-- Pop Metodu -->
+    <blockquote>
+      <h2><span class="kod">pop</span> Metoduyla Dizileri Manipüle Etmek</h2>
+
+      Bir dizideki verileri değiştirmenin başka bir yolu da <span class="kod">.pop()</span> fonksiyonudur.
+      <br><br>
+      <span class="kod">.pop()</span>, bir dizinin sonundan bir değer çıkarmak için kullanılır. Çıkan bu değeri bir
+      değişkene atayarak saklayabiliriz. Başka bir deyişle, <span class="kod">.pop()</span> bir dizideki son öğeyi
+      kaldırır ve o öğeyi döndürür.
+      <br><br>
+      Bir diziden herhangi bir girdi (entry) türü çıkarılabilir - sayılar, diziler, hatta iç içe geçmiş diziler.
+      <p id="kodblok" class="kodblok">
+        const threeArr = [1, 4, 6];
+        <br>
+        const oneDown = threeArr.pop();
+        <br>
+        console.log(oneDown);
+        <br>
+        console.log(threeArr);
+        <br><br>
+        >>> 6
+        <br><br>
+        >>> [1, 4]
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- Shift Metodu -->
+    <blockquote>
+      <h2><span class="kod">shift</span> Metoduyla Dizileri Manipüle Etmek</h2>
+
+      <span class="kod">.pop()</span> her zaman bir dizinin <strong>son</strong> elemanını kaldırır. <strong>ya ilkini
+        kaldırmak istersek?</strong>
+      <br><br>
+      İşte burada <span class="kod">.shift()</span> devreye giriyor. Tıpkı <span class="kod">.pop()</span> gibi
+      çalışıyor, tek farkı sonuncu yerine <strong>ilk</strong> öğeyi kaldırması.
+      <br><br>
+      Bir diziden herhangi bir girdi (entry) türü çıkarılabilir - sayılar, diziler, hatta iç içe geçmiş diziler.
+      <p id="kodblok" class="kodblok">
+        const ourArray = ["Esra", "M", ["masum"]];
+        <br>
+        const removedFromOurArray = ourArray.shift();
+        <br><br>
+        console.log(ourArray);
+        <br>
+        console.log(removedFromOurArray);
+        <br><br>
+        >>> ["M", ["masum"]]
+        <br><br>
+        >>> Esra
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- Unshift Metodu -->
+    <blockquote>
+      <h2><span class="kod">unshift</span> Metoduyla Dizileri Manipüle Etmek</h2>
+
+      <span class="kod">shift</span> kullanarak bir dizinin ilk elemanını kaldırabiliyorduk. Peki ya dizinin başına bir
+      şey eklemek istersek ne yapmalıyız? İşte burada <span class="kod">unshift</span> fonksiyonu devreye giriyor.
+      <br><br>
+      <span class="kod">.unshift()</span> tam olarak <span class="kod">.push()</span> gibi çalışır, ancak elemanı
+      dizinin sonuna eklemek yerine, <strong>dizinin başına</strong> ekler.
+      <p id="kodblok" class="kodblok">
+        const ourArray = ["Esra", "M", "Masum"];
+        <br>
+        ourArray.shift();
+        <br>
+        ourArray.unshift("Esraaa");
+        <br>
+        console.log(ourArray);
+        <br><br>
+        >>> ['Esraaa', 'M', 'Masum']
+      </p>
+
+      Aynı şekilde dizi de ekleyip çıkarabiliriz:
+      <p id="kodblok" class="kodblok">
+        const myArray = [["Esra", 20], ["Masum", 26]];
+        <br>
+        myArray.shift();
+        <br>
+        myArray.unshift(["Esra", 23]);
+        <br>
+        console.log(myArray);
+        <br><br>
+        >>> [ ['Esra', 20], ['Masum', 26] ]
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- Shopping List -->
+    <blockquote>
+      <h2>Alışveriş Listesi</h2>
+
+      <span class="kod">myList</span> adındaki bir değişkende alışveriş listesi oluşturun. Liste, birkaç alt dizi (<em>sub-array</em>) içeren çok boyutlu (<em>multi-dimensional</em>) bir dizi olmalıdır.
+      <br><br>
+      Her alt dizideki ilk öğe, öğenin adını içeren bir <span class="kod">string</span> içermelidir. İkinci eleman, miktarı temsil eden bir sayı olmalıdır.
+      <p id="kodblok" class="kodblok">
+        const myList = [
+        <br>
+        ["Süt", 2],
+        <br>
+        ["Cips", 5],
+        <br>
+        ["Şampuan", 2],
+        <br>
+        ["Su", 5],
+        <br>
+        ["Muz", 2]
+        <br>
+        ];
+      </p>
+    </blockquote>
+    <hr>
     <!-- Footer -->
     <div class="pages">
       <a href="4.html" class="previous">&laquo; Önceki Sayfa</a>
