@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <title>2. Sayfa / JavaScript Notlarım</title>
+  <title>3. Sayfa / JavaScript Notlarım</title>
 </head>
 
 <body>
@@ -15,21 +15,131 @@
     <h1>JavaScript Notlarım</h1>
     <hr>
     
-    <!-- Stringlere Değişkenler İliştirmek/Eklemek-->
+    <!-- Bir String'in Uzunluğunu Bulmak -->
     <blockquote>
-      <h2><span class="kod">String</span>lere <span class="kod">Değişkenler</span> Eklemek (Append)</h2>
-      Yine <span class="kod">+=</span> operatörünü kullanarak bir <span class="kod">string</span>e <span class="kod">değişken</span>(ler) ekleyebiliriz.
+      <h2>Bir <span class="kod">String</span>'in <span class="kod">Uzunuluğunu</span> Bulmak (.length)</h2>
+      Bir <span class="kod">string</span> değerinin uzunluğunu, <span class="kod">string</span> değişkeninden veya <span class="kod">string</span> sabit değerinden sonra <span class="kod">.length</span> yazarak bulabiliriz.
       <p id="kodblok" class="kodblok">
-        const anAdjective = "harika!";
+        console.log("Masum Gökyüz".length);
         <br><br>
-        let myStr = "FreeCodeCamp is ";
-        <br><br>
-        myStr += anAdjective;
-        <br><br>
-        console.log(myStr);
-        <br><br>
-        >>> FreeCodeCamp is harika!
+        >>> 12
       </p>
+      Boşluklar da uzunluğa dahil edilir. Bundan dolayı bize <span class="kod">12</span> değerini döner.
+      <p id="kodblok" class="kodblok">
+        let lastNameLength = 0;,
+        <br><br>
+        const lastName = "Gökyüz";
+        <br><br>
+        lastNameLength = lastName.length;
+        <br><br>
+        console.log(lastNameLength);
+        <br><br>
+        >>> 7
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- Bracket Notasyonu ve İndis -->
+    <blockquote>
+      <h2>Bracket Notation Kullanarak Bir <span class="kod">String</span>'in İlk Karakterini Bulmak</h2>
+      Köşeli parantez gösterimi (<em>bracket notation</em>), bir <span class="kod">string</span> içerisindeki belirli bir <span class="kod">index/indis</span>teki bir karakteri elde etmenin bir yoludur.
+      <br><br>
+      JavaScript gibi çoğu modern programlama dili, insanlar gibi 1'den saymaya başlamaz. 0'dan başlarlar. Buna <em>Zero-based indexing</em> denir.
+      <br><br>
+      Örneğin, <span class="kod">Masum</span> kelimesinin <span class="kod">0. indisindeki</span> karakter <span class="kod">M</span> karakteridir. Yani <span class="kod">const firstName = "Masum"</span> ise, <span class="kod">firstName[0]</span> kullanarak dizgenin ilk harfinin değerini alabiliriz.
+
+      <p id="kodblok" class="kodblok">
+        const firstName = "Charles";
+        <br><br>
+        const firstLetter = firstName[0];
+        <br><br>
+        console.log(firstLetter);
+        <br><br>
+        >>> C
+      </p>
+
+      Başka bir örnek için bkz.:
+
+      <p id="kodblok" class="kodblok">
+        let firstLetterOfLastName = "";
+        <br><br>
+        const lastName = "Lovelace";
+        <br><br>
+        firstLetterOfLastName = lastName[0];
+        <br><br>
+        console.log(firstLetterOfLastName);
+        <br><br>
+        >>> L
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- Stringin Değişmezliği -->
+    <blockquote>
+      <h2><span class="kod">String</span>'in Değişmezliği (Immutability)</h2>
+      JavaScript'te, <span class="kod">string</span> değerleri değişmezdir, yani oluşturulduktan sonra değiştirilemezler.
+      <br><br>
+      Örneğin, <span class="kod">Bob</span> dizisindeki <span class="kod">B</span> harfi <span class="kod">J</span> harfine değiştirilemeyeceği için aşağıdaki kod bir hata üretecektir:
+      <p id="kodblok" class="kodblok">
+        let myStr = "Bob";
+        <br><br>
+        myStr[0] = "J";
+      </p>
+      Bunun, <span class="kod">myStr</span>'ye yeniden bir değer atanamayacağı anlamına gelmediğini unutmayın. <span class="kod">myStr</span>'yi değiştirmenin tek yolu, ona şu şekilde yeni bir değer atamak olacaktır:
+      <p id="kodblok" class="kodblok">
+        let myStr = "Bob";
+        <br><br>
+        myStr = "Job";
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- Bracket Notation Kullanarak Bir String'in N. Karakterini Bulma -->
+    <blockquote>
+      <h2>Bracket Notation Kullanarak Bir <span class="kod">String</span>'teki N. (Nth) Karakteri Bulma</h2>
+      Birinci karakteri bulabileceğimiz gibi <span class="kod">n. (nth)</span> karakteri de <em>bracket notation</em> kullanarak bulabiliriz.
+      <br><br>
+      Bilgisayarların saymaya 0'dan başladığını unutmayın, yani ilk karakter aslında sıfırıncı karakterdir.
+      <p id="kodblok" class="kodblok">
+        const firstName = "Esra";
+        <br><br>
+        const secondLetterOfFirstName = firstName[1];
+        <br><br>
+        console.log(secondLetterOfFirstName);
+        <br><br>
+        >>> s
+    </blockquote>
+    <hr>
+
+    <!-- Bracket Notation Kullanarak Bir String'in Son Karakterini Bulma -->
+    <blockquote>
+      <h2>Bracket Notation Kullanarak Bir <span class="kod">String</span>'in Son Karakterini Bulma</h2>
+      Bir <span class="kod">string</span>'in son harfini elde etmek için <span class="kod">string</span>'in <span class="kod">uzunluğundan (length)</span> 1 çıkarmamız gerekir.
+      <br><br>
+      Örneğin, <span class="kod">const firstName = "Esra"</span> ise, <span class="kod">firstName[firstName.length - 1]</span> kullanarak <span class="kod">string</span>'in son harfinin değerini alabiliriz.
+      <p id="kodblok" class="kodblok">
+        const lastName = "Ekici";
+        <br><br>
+        const lastLetterOfLastName = lastName [lastLetterOfLastName.length - 1];
+        <br><br>
+        console.log(lastLetterOfLastName);
+        <br><br>
+        >>> i
+    </blockquote>
+    <hr>
+
+    <!-- Bracket Notation Kullanarak Bir String'in Sondan N. Karakterini Bulma -->
+    <blockquote>
+      <h2>Bracket Notation Kullanarak Bir <span class="kod">String</span>'in Sondan N. (Nth-to-Last) Karakterini Bulma</h2>
+      Bir <span class="kod">string</span>'teki son karakteri almak için az önce kullandığımız aynı ilkeyi, <span class="kod">sondan N.</span>'ye kadar olan karakterleri almak için de kullanabiliriz. Örneğin:
+      <p id="kodblok" class="kodblok">
+        const lastName = "Ekici";
+        <br><br>
+        const fourthToLastLetter = lastName[lastName.length - 4];
+        <br><br>
+        console.log(fourthToLastLetter);
+        <br><br>
+        >>> k
     </blockquote>
     <hr>
 
