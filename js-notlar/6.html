@@ -19,27 +19,146 @@
     <blockquote>
       <h2><span class="kod">Fonksiyonlar</span> ile Yeniden Kullanılabilir (Reusable) JavaScript Yazmak</h2>
 
-      Bir dizinin sonuna veri eklemenin (<em>append</em>) kolay bir yolu <span class="kod">push()</span> fonksiyonudur.
-      <br><br>
-      <span class="kod">.push()</span> bir veya daha fazla parametre alır ve bunları dizinin sonuna "<em>pushlar</em>".
+      JavaScript'te, kodumuzu <span class="kod">fonksiyonlar</span> adı verilen yeniden kullanılabilir
+      (<em>reusable</em>) parçalara ayırabiliriz.
+
       <p id="kodblok" class="kodblok">
-        const arr1 = [1, 2, 3];
+        function functionName() {
         <br>
-        arr1.push(4);
+        console.log("Hello World");
         <br>
-        console.log(arr1);
-        >>> [1, 2, 3, 4]
+        }
+      </p>
+
+      Yazdığım <span class="kod">fonksiyonları</span> şu şekilde çağırabiliriz (<em>call</em>) veya çalıştırabiliriz
+      (<em>invoke</em>):
+      <br>
+      <center><span class="kod">functionName();</span></center>
+      <br>
+      <span class="kod">Fonksiyon</span> her çağrıldığında geliştirici konsoluna <span class="kod">Hello World</span>
+      mesajı yazdırılır. Küme parantezleri arasındaki tüm kodlar, <span class="kod">fonksiyon</span> her çağrıldığında
+      yürütülür.
+
+      <p id="kodblok" class="kodblok">
+        function reusableFunction() {
+        <br>
+        console.log("Hi World");
+        <br>
+        }
+        <br>
+        reusableFunction();
         <br><br>
-        const arr2 = ["Masum", "E", "Esra"];
+        >>> Hi World
+      </p>
+
+    </blockquote>
+    <hr>
+
+    <!-- Parametre ve Argümanlar -->
+    <blockquote>
+      <h2><span class="kod">Argümanlar</span> ile Değerleri <span class="kod">Fonksiyonlara</span> Geçirmek/İletmek
+        (Passing)
+      </h2>
+
+      <span class="kod">Parametreler</span>, çağrıldıklarında bir <span class="kod">fonksiyon</span>a girilecek değerler
+      (<i>values</i>) için yer tutucu görevi gören değişkenlerdir (<i>variables</i>). Bir <span
+        class="kod">fonksiyon</span> tanımlandığında, genellikle bir veya daha fazla <span class="kod">parametre</span>
+      ile birlikte tanımlanır. Çağrıldığında bir <span class="kod">fonksiyon</span>a girilen (veya "<i>geçirilen</i>" /
+      "<i>passed</i>") gerçek değerler <span class="kod">argüman</span> olarak bilinir.
+
+      <br><br>
+
+      Aşağıdaki örnekte iki <span class="kod">parametre</span>ye, yani <span class="kod">param1</span> ve <span
+        class="kod">param2</span> adlı iki <span class="kod">parametre</span>ye sahip bir fonksiyon örneği vardır:
+
+      <p id="kodblok" class="kodblok">
+        function funcWithTwoParam(param1, param2) {
         <br>
-        arr2.push(["mutlu", "evli"]);
+        console.log(param1, param2);
         <br>
-        console.log(arr2);
+        }
+      </p>
+      Bu <span class="kod">fonksiyon</span>u şöyle çağırdığımızı düşünelim:
+      <br><br>
+      <center><span class="kod">funcWithTwoParam("Hello", "World");</span></center>
+      <br>
+      Bu <span class="kod">fonksiyon</span>daki parametrelerin yerine iki <span class="kod">string</span> geçirdik, yani
+      <span class="kod">parametre</span>lerin yerine <span class="kod">Hello</span> ve <span class="kod">World</span>
+      koymuş olduk.
+      <br><br>
+      <span class="kod">Fonksiyon</span> içinde, <span class="kod">param1</span> adındaki <span
+        class="kod">parametre</span> esasen <span class="kod">Hello</span> değerindeki bir <span
+        class="kod">string</span>e ve <span class="kod">param2</span> adındaki <span class="kod">parametre</span> de
+      <span class="kod">World</span> değerine sahip bir <span class="kod">string</span>e eşit olacaktır. <span
+        class="kod">funcWithTwoParam</span>'ı farklı bağımsız değişkenlerle tekrar çağırabileceğinizi ve parametrelerin
+      yeni bağımsız değişkenlerin değerini alacağını unutmayın.
+      <p id="kodblok" class="kodblok">
+        function toplamaFonksiyonu(a, b) {
+        <br>
+        console.log(a + b);
+        <br>
+        }
+        <br>
+        toplamaFonksiyonu(5, 7);
         <br><br>
-        >>> ["Masum", "E", "Esra", ["mutlu", "evli"]]
+        >>> 12
       </p>
     </blockquote>
     <hr>
+
+    <!-- Return -->
+    <blockquote>
+      <h2><span class="kod">return</span> ile <span class="kod">Fonksiyon</span>dan Değer Döndürmek</h2>
+
+      Değerleri <span class="kod">argüman</span>a sahip bir <span class="kod">fonksiyon</span>a aktarabiliriz . Bir <span class="kod">fonksiyon</span>dan geri bir değer göndermek için <span class="kod">return</span> ifadesi kullanabiliriz.
+
+      <p id="kodblok" class="kodblok">
+        function plusThree(number) {
+        <br>
+        return num + 3;
+        <br>
+        }
+        <br><br>
+        const answer = plusThree(5);
+      </p>
+      Yukarıdaki <span class="kod">answer</span> değişkeni artık <span class="kod">8</span> değerine sahiptir.
+      <br><br>
+      <span class="kod">plusThree</span> adındaki <span class="kod">fonksiyon</span> esas itibariyle <span class="kod">number</span> için bir <em>argüman</em> alır ve bize <span class="kod">number + 3</span>'e eş bir değer döndürür.
+      <p id="kodblok" class="kodblok">
+        function timesFive(num) {
+          <br>
+          return num * 5;
+          <br>
+        }
+        <br><br>
+        const answer = timesFive(6);
+        <br><br>
+        console.log(answer);
+        <br><br>
+        >>> 30
+      </p>
+    </blockquote>
+    <hr>
+
+    <!-- Global Scope -->
+    <blockquote>
+      <h2><span class="kod">Global Scope</span> ve <span class="kod">Fonksiyonlar</span></h2>
+
+      ...
+
+      <p id="kodblok" class="kodblok">
+        function plusThree(number) {
+        <br>
+        return num + 3;
+        <br>
+        }
+        <br><br>
+        const answer = plusThree(5);
+      </p>
+
+    </blockquote>
+    <hr>
+
     <!-- Footer -->
     <div class="pages">
       <a href="5.html" class="previous">&laquo; Önceki Sayfa</a>
