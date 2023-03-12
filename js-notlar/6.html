@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <title>5. Sayfa / JavaScript Notlarım</title>
+  <title>6. Sayfa / JavaScript Notlarım</title>
 </head>
 
 <body>
@@ -110,7 +110,9 @@
     <blockquote>
       <h2><span class="kod">return</span> ile <span class="kod">Fonksiyon</span>dan Değer Döndürmek</h2>
 
-      Değerleri <span class="kod">argüman</span>a sahip bir <span class="kod">fonksiyon</span>a aktarabiliriz . Bir <span class="kod">fonksiyon</span>dan geri bir değer göndermek için <span class="kod">return</span> ifadesi kullanabiliriz.
+      Değerleri <span class="kod">argüman</span>a sahip bir <span class="kod">fonksiyon</span>a aktarabiliriz . Bir
+      <span class="kod">fonksiyon</span>dan geri bir değer göndermek için <span class="kod">return</span> ifadesi
+      kullanabiliriz.
 
       <p id="kodblok" class="kodblok">
         function plusThree(number) {
@@ -123,12 +125,14 @@
       </p>
       Yukarıdaki <span class="kod">answer</span> değişkeni artık <span class="kod">8</span> değerine sahiptir.
       <br><br>
-      <span class="kod">plusThree</span> adındaki <span class="kod">fonksiyon</span> esas itibariyle <span class="kod">number</span> için bir <em>argüman</em> alır ve bize <span class="kod">number + 3</span>'e eş bir değer döndürür.
+      <span class="kod">plusThree</span> adındaki <span class="kod">fonksiyon</span> esas itibariyle <span
+        class="kod">number</span> için bir <em>argüman</em> alır ve bize <span class="kod">number + 3</span>'e eş bir
+      değer döndürür.
       <p id="kodblok" class="kodblok">
         function timesFive(num) {
-          <br>
-          return num * 5;
-          <br>
+        <br>
+        return num * 5;
+        <br>
         }
         <br><br>
         const answer = timesFive(6);
@@ -144,21 +148,142 @@
     <blockquote>
       <h2><span class="kod">Global Scope</span> ve <span class="kod">Fonksiyonlar</span></h2>
 
-      ...
+      JavaScript'te <span class="kod">kapsam / kapsama alanı</span> (<em>scope</em>), değişkenlerin görünürlüğünü ifade
+      eder. Bir fonksiyon bloğunun (yani, <span class="kod">{}</span>) dışında tanımlanan değişkenler <span
+        class="kod">Global</span> kapsama sahiptir. Bu, bu değişkenlerin JavaScript kodunun her yerinde
+      görülebilecekleri (ve dolayısıyla da erişilebilecekleri) anlamına gelir.
+
+      <br><br>
+
+      <span class="kod">let</span> veya <span class="kod">const</span> anahtar sözcükleri olmadan tanımlanan değişkenler
+      <strong>otomatik olarak</strong> <span class="kod">global</span> kapsamda oluşturulur. Bu, kodumuzun başka bir
+      yerinde veya bir fonksiyonu tekrar çalıştırırken istenmeyen sonuçlara neden olabilir. Değişkenlerinizi her zaman
+      <span class="kod">let</span> veya <span class="kod">const</span> ile tanımlamalısınız.
 
       <p id="kodblok" class="kodblok">
-        function plusThree(number) {
+        //let ile global değişken tanımlıyoruz
         <br>
-        return num + 3;
+        let myGlobal = 10;
+        <br><br>
+        function fun1() {
+        <br>
+        //keyword kullanmadan tanımladığımız için global:
+        <br>
+        oopsGlobal = 5;
         <br>
         }
         <br><br>
-        const answer = plusThree(5);
+        function fun2() {
+        <br>
+        let output = "";
+        <br>
+        if (typeof myGlobal != "undefined") {
+        <br>
+        output += "myGlobal: " + myGlobal;
+        <br>
+        }
+        <br>
+        if (typeof oopsGlobal != "undefined") {
+        <br>
+        output += " oopsGlobal: " + oopsGlobal;
+        <br>
+        }
+        <br>
+        console.log(output);
+        <br>
+        }
+        <br><br>
+        fun2();
+        <br><br>
+        >>> myGlobal: 10 oopsGlobal: 5
       </p>
+      <center>Ayrıca bkz.: <a href="https://www.w3schools.com/js/js_scope.asp"
+          target="_blank">https://www.w3schools.com/js/js_scope.asp</a></center>
 
     </blockquote>
     <hr>
 
+    <!-- Local Scope -->
+    <blockquote>
+      <h2><span class="kod">Local Scope</span> ve <span class="kod">Fonksiyonlar</span></h2>
+
+      Bir <span class="kod">fonksiyon</span> içinde tanımlanan değişkenlerin yanı sıra fonksiyon parametreleri de <span
+        class="kod">local</span> (<em>local</em>) kapsama sahiptir. Bu, <strong>yalnızca</strong> o <span
+        class="kod">fonksiyon</span> içinde görünür oldukları
+      anlamına gelir.
+      <br><br>
+      Aşağıda <span class="kod">localScope</span> adındaki bir değişkene sahip bir <span class="kod">fonksiyon</span>
+      örneği vardır:
+      <p id="kodblok" class="kodblok">
+        function myTest() {
+        <br>
+        const localScope = "Hey, ben localScope!";
+        <br>
+        console.log(localScope);
+        <br>
+        }
+        <br><br>
+        myTest();
+        <br>
+        console.log(localScope);
+        <br><br>
+        >>> Hey, ben localScope!
+        <br>
+        >>> ReferenceError: localScope is not defined
+      </p>
+
+      <span class="kod">myTest()</span> adındaki <span class="kod">fonksiyon</span> çağrıldığında, konsolda <span
+        class="kod">Hey, ben localScope!</span> olarak bir <span class="kod">string</span> döndürür.
+      <br><br>
+      Hemen ardından gelen <span class="kod">console.log(localScope)</span> satırı ise bize bir hata verir çünkü <span
+        class="kod">localScope</span> adındaki değişken aslında <span class="kod">myTest</span> adındaki <span
+        class="kod">fonksiyon</span> içerisinde tanımlanmıştır, yani <span class="kod">local</span> bir değişkendir ve
+      dolayısıyla <span class="kod">fonksiyon</span> dışarısından erişilemez.
+    </blockquote>
+    <hr>
+
+    <!-- Global vs. Local -->
+    <blockquote>
+      <h2><span class="kod">Fonksiyon</span>larda <span class="kod">Global</span> vs. <span class="kod">Local
+          Scope</span></h2>
+
+      Aynı ada sahip hem <span class="kod">local</span> hem de <span class="kod">global</span> değişkenlere sahip olmak
+      mümkündür. Bu durumda, <span class="kod">local</span> değişken <span class="kod">global</span> değişkene göre
+      <strong>önceliklidir</strong>.
+
+      <p id="kodblok" class="kodblok">
+        const someVar = "Hat";
+        <br>
+        function myFun() {
+        <br>
+        const someVar = "Head";
+        <br>
+        return someVar;
+        <br>
+        }
+      </p>
+      <span class="kod">myFun</span> değişkeni çağrıldığında <span class="kod">Head</span> şeklinde bir <span
+        class="kod">string</span> döndürecektir çünkü yukarıda da belirtildiği üzere <span class="kod">local</span>
+      değişkenin <span class="kod">global</span> değişkene <strong>önceliği</strong> vardır.
+
+      <p id="kodblok" class="kodblok">
+        const outerWear = "T-Shirt";
+        <br><br>
+        function myOutfit() {
+        <br>
+        const outerWear = "sweater"
+        <br>
+        console.log(outerWear);
+        <br>
+        }
+        <br><br>
+        myOutfit();
+        <br><br>
+        >>> sweater
+      </p>
+    </blockquote>
+    <hr>
+    
     <!-- Footer -->
     <div class="pages">
       <a href="5.html" class="previous">&laquo; Önceki Sayfa</a>

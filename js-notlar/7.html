@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>7. Sayfa / JavaScript Notlarım</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>JavaScript Notlarım</h1>
+    <hr>
+
+    <!-- returned Undefined Value -->
+    <blockquote>
+
+      <h2>Bir <span class="kod">Fonskiyon</span>dan Dönen <span class="kod">Undefined Value</span>'yu Anlamak</h2>
+
+      Bir <span class="kod">fonksiyon</span>, <span class="kod">return</span> ifadesini içerebilir ancak içermesi
+      zorunlu değildir. <span class="kod">Fonksiyon</span>un bir <span class="kod">return</span> ifadesini içermemesi
+      durumunda ve <span class="kod">fonksiyon</span> çağrıldığından, <span class="kod">fonksiyon</span> içteki kodu
+      işler ancak döndürülen (<em>returned</em>) değer <span class="kod">undefined</span>'dır.
+
+      <p id="kodblok" class="kodblok">
+        let sum = 0;
+        <br><br>
+        function addSum(num) {
+        <br>
+        sum = sum + num;
+        <br>
+        }
+        <br><br>
+        addSum(3);
+      </p>
+
+      Buradaki <span class="kod">addSum</span> esas itibariyle <span class="kod">return</span> ifadesi içermeyen bir
+      <span class="kod">fonksiyon</span>dur. Bu <span class="kod">fonksiyon</span>, <span class="kod">global</span> bir
+      scope'a sahip olan <span class="kod">sum</span> değişkeninin değerini değiştirecek fakat <span
+        class="kod">returned value</span> ise <span class="kod">undefined</span> olacaktır (çünkü <span
+        class="kod">fonksiyon</span> içerisinde <span class="kod">return</span> ifadesi kullanılmamıştır).
+
+    </blockquote>
+    <hr>
+
+    <!-- Returned Value'yu Atamak -->
+    <blockquote>
+
+      <h2><span class="kod">Returned Value</span>'yu Atamak</h2>
+
+      Değişken Tanımlama dersindeki tartışmamızdan hatırlayacağımız gibi, eşittir (<span class="kod">=</span>)işaretinin
+      sağındaki her şey değer atanmadan <strong>önce</strong> işlem görür. Bu, bir <span class="kod">fonksiyon</span>un
+      dönüş değerini alıp bir değişkene atayabileceğimiz anlamına gelir.
+
+      <br><br>
+
+      İki sayıyı toplayan bir toplam <span class="kod">fonksiyonu</span>u tanımladığımızı varsayalım.
+
+      <p id="kodblok" class="kodblok">
+        ourSum = sum(5,12);
+      </p>
+
+      <span class="kod">sum</span> adındaki fonksiyona iki argüman, yani <span class="kod">5</span> ve <span
+        class="kod">12</span> verdiğimizde alacağımız <span class="kod">return value</span> esasen <span
+        class="kod">17</span>'dir. Bu <span class="kod">returned value</span> de <span class="kod">ourSum</span>
+      adındaki değişkenimize atanır (<span class="kod">=</span> operatörünün sağındaki işlemlerin <strong>daha
+        önce</strong> işlem ördüğünü yukarıda belirttik).
+
+      <p id="kodblok" class="kodblok">
+        let processed = 0;
+        <br><br>
+        function processArg(num) {
+        <br>
+        return (num + 3) / 5;
+        <br>
+        }
+        <br><br>
+        processed = processArg(7);
+        <br><br>
+        console.log(processed);
+        <br><br>
+        >>> 2
+      </p>
+
+    </blockquote>
+    <hr>
+
+    <!-- Footer -->
+    <div class="pages">
+      <a href="6.html" class="previous">&laquo; Önceki Sayfa</a>
+      <a href="8.html" class="next">Sonraki Sayfa &raquo;</a>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
