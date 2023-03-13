@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>8. Sayfa / JavaScript Notlarım</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>JavaScript Notlarım</h1>
+    <hr>
+
+    <!-- If Statements -->
+    <blockquote>
+
+      <h2>Koşul Mantığı: <span class="kod">If Statements</span></h2>
+
+      <span class="kod">if</span> ifadeleri kodda karar vermek için kullanılır. <span class="kod">if</span> anahtar
+      sözcüğü, parantez içinde tanımlanan kodu belirli koşullar altında çalıştırmasını JavaScript'e söyler. Bu koşullar
+      <span class="kod">Boolean</span> koşulları olarak bilinir ve yalnızca <span class="kod">true</span> ya da <span
+        class="kod">yanlış</span> olabilirler.
+      <br><br>
+
+      Koşul <span class="kod">true</span> olarak değerlendirildiğinde, program küme parantezleri içindeki ifadeleri
+      çalıştırır. <span class="kod">Boolean</span> koşulu <span class="kod">false</span> olarak değerlendirildiğinde,
+      küme parantezlerinin içindeki deyim çalıştırılmaz.
+
+      <br><br>
+
+      <center>Şöyle bir kodumuz olsun:</center>
+
+      <!-- "pibb" uzantılı çekiyoruz ki .js uzantılı dosya aslında HTML olarak görüntülenebilsin-->
+      <iframe src="https://gist.github.com/periakteon/4e298f4e1d58b3be4c56e8b1980023b6.pibb"
+        style="width: 100%; height: 270px; border: 0;" scrolling="no">
+      </iframe>
+
+      Buradaki <span class="kod">test(true)</span> metodu bize bir <span class="kod">string</span> olarak <span
+        class="kod">It was true</span> ifadesini döndürür. <span class="kod">test(false)</span> metodu ise <span
+        class="kod">string</span> olarak <span class="kod">It was false</span> ifadesini döndürür.
+
+      <br><br>
+
+      <span class="kod">test</span> adındaki <span class="kod">fonksiyon</span>u <span class="kod">true</span> değeriyle
+      çağırdığımızda, <span class="kod">if</span> ifadesi <span class="kod">myCondition</span>'ın doğru olup olmadığını
+      görmek için değerlendirir. Sonuç <span class="kod">true</span> olduğundan, bu fonksiyon, <span class="kod">It was
+        true</span> döndürür. <span class="kod">test</span> adındaki <span class="kod">fonksiyon</span>u <span
+        class="kod">false</span> değeriyle çağırdığımızda, <span class="kod">myCondition</span> koşulu <span
+        class="kod">true</span> olmamaktadır ve küme parantezleri içindeki ifade çalıştırılmaz ve bu <span
+        class="kod">fonksiyon</span> da bize <span class="kod">It was false </span> döndürür.
+
+      <center><strong class="challenge">challenge</strong></center>
+
+      1) Bir <span class="kod">fonksiyon</span> oluşturun ve <span class="kod">fonksiyon</span>un içerisinde bir <span
+        class="kod">if</span> ifadesi oluşturun.
+
+      <br><br>
+
+      2) Oluşturduğunuz bu <span class="kod">fonksiyon</span>a parantez içerisinde <span class="kod">wasThatTrue</span>
+      adında bir <span class="kod">parametre</span> verin.
+
+      <br><br>
+
+      3) Eğer <span class="kod">wasThatTrue</span> adındaki <span class="kod">parametre</span>miz <span
+        class="kod">true</span> ise, <span class="kod">Yes, that was true</span> ifadesini döndürsün; <span
+        class="kod">false</span> ise, <span class="kod">No, that was false</span> ifadesini döndürsün.
+
+      <iframe src="https://gist.github.com/periakteon/47faff565f814407238dbfd07991dbc9.pibb"
+        style="width: 100%; height: 340px; border: 0;" scrolling="no"></iframe>
+
+    </blockquote>
+    <hr>
+
+    <!-- Equality -->
+    <blockquote>
+
+      <h2><span class="kod">Eşitlik (==)</span> Operatörüyle Karşılaştırma (Comparison)</h2>
+
+      JavaScript'te birçok karşılaştırma (<em>comparison</em>) operatörü vardır. Bu operatörlerin tümü <span class="kod">boolean</span> bir <span class="kod">true</span> ya da <span class="kod">false</span> değeri döndürür.
+      <br><br>
+      En temel operatör <span class="kod">eşitlik (==)</span> operatörüdür. <span class="kod">Eşitlik (==)</span> operatörü iki değeri karşılaştırır ve bu değerler eşdeğerse <span class="kod">true</span>, değilse <span class="kod">false</span> değerini döndürür. <span class="kod">Eşitlik (==)</span> operatörünün <span class="kod">atama (=)</span> operatöründen farklı olduğuna <strong>dikkat edin</strong>. Hatırlayacak olursak, <span class="kod">atama (=)</span> operatörü operatörün sağındaki değeri soldaki bir değişkene atama işlevi görür.
+
+      <br><br>
+
+      <center>Şöyle bir kodumuz olsun:</center>
+
+      <!-- "pibb" uzantılı çekiyoruz ki .js uzantılı dosya aslında HTML olarak görüntülenebilsin-->
+      <iframe src="https://gist.github.com/periakteon/e9c989606540c49d7503add07f3d8751.pibb"
+        style="width: 100%; height: 180px; border: 0;" scrolling="no">
+      </iframe>
+
+      Eğer <span class="kod">myVal</span> <span class="kod">10</span>'a eşitse, eşitlik operatörü <span class="kod">true</span> değerini döndürür, yani <span class="kod">if</span> ifadesinin sahip olduğu parantezler içindeki kod çalıştırılır ve <span class="kod">fonksiyon</span> bize bir <span class="kod">string</span> olarak <span class="kod">Equal</span> değerini döndürür. Aksi takdirde, <span class="kod">Not Equal</span> döndürür.
+      
+      <br><br>
+
+      JavaScript'in iki farklı <em>veri türü</em>nü (örneğin, <span class="kod">sayılar</span> ve <span class="kod">stringler</span>) karşılaştırabilmesi için, bir türü diğerine dönüştürmesi gerekir. Bu, <em>Tip Zorlaması (Type Coercion)</em> olarak bilinir. Bu bir kez yapıldığında, JavaScript, terimleri aşağıdaki gibi karşılaştırabilir:
+      <iframe src="https://gist.github.com/periakteon/83bd2956d88c03a3965d482d1dc14efe.pibb"
+        style="width: 100%; height: 150px; border: 0;" scrolling="no"></iframe>
+
+      <center><strong class="challenge">challenge</strong></center>
+
+      1) <span class="kod">Eşitlik</span> operatörünü kullanarak, <span class="kod">val</span> değeri <span class="kod">12</span>'ye eşit olduğunda <span class="kod">Equal</span> şeklindeki bir <span class="kod">string</span> döndüren <span class="kod">fonksiyon</span> oluşturun.
+
+      <iframe src="https://gist.github.com/periakteon/7c1c9ecaed5628b9cdc93944df1c2c04.pibb"
+        style="width: 100%; height: 385px; border: 0;" scrolling="no"></iframe>
+
+    </blockquote>
+    <hr>
+
+    <!-- Strict Equality -->
+    <blockquote>
+
+      <h2><span class="kod">Katı Eşitlik (===)</span> Operatörüyle Karşılaştırma (Comparison)</h2>
+
+      <span class="kod">Katı eşitlik (===)</span> operatörü, <span class="kod">eşitlik (==)</span> operatörünün mukabilidir. Ancak, karşılaştırılan her iki değeri de <strong>ortak bir tür</strong>e dönüştürmeye çalışan <span class="kod">eşitlik (==)</span> operatörünün aksine, <span class="kod">katı eşitlik (===)</span> operatörü bir tür dönüştürme (<em>type conversion</em>) <strong>gerçekleştirmez</strong> . 
+      <br><br>
+      Karşılaştırılan değerler <em>farklı türlere</em> sahipse, <strong>eşit olmadıkları</strong> kabul edilir ve <span class="kod">katı eşitlik (===)</span> operatörü <span class="kod">false</span> değerini döndürür.
+
+      <!-- "pibb" uzantılı çekiyoruz ki .js uzantılı dosya aslında HTML olarak görüntülenebilsin-->
+      <iframe src="https://gist.github.com/periakteon/070fa6a52780d6eb7430333741a74bcf.pibb"
+        style="width: 100%; height: 100px; border: 0;" scrolling="no">
+      </iframe>
+
+      İkinci örnekteki <span class="kod">3</span>, esasen, bir <span class="kod">Sayı (Number)</span> türüdür ve <span class="kod">'3'</span> ise, esasen, bir <span class="kod">String</span> türüdür.
+      <br><br>
+
+      <center><strong class="challenge">challenge</strong></center>
+      <center>Şöyle bir kodumuz olsun:</center>
+
+      <!-- "pibb" uzantılı çekiyoruz ki .js uzantılı dosya aslında HTML olarak görüntülenebilsin-->
+      <iframe src="https://gist.github.com/periakteon/5c749d083b9b63db23162ffe72340378.pibb"
+        style="width: 100%; height: 180px; border: 0;" scrolling="no">
+      </iframe>
+      
+      1) <span class="kod">if</span> ifadesinde <span class="kod">katı eşitlik (===)</span> operatörünü kullanın.
+
+      <br><br>
+
+      2) <span class="kod">val</span> <span class="kod">7</span>'ye katı eşit (<em>strictly equal</em>) olduğunda <span class="kod">fonksiyon</span> bize <span class="kod">Equal</span> diye bir <span class="kod">string</span> döndürsün.
+
+      <iframe src="https://gist.github.com/periakteon/9ae4d872f3d1311d71ed661ed06ef8a3.pibb"
+        style="width: 100%; height: 400px; border: 0;" scrolling="no"></iframe>
+
+    </blockquote>
+    <hr>
+
+    <!-- Strict Equality -->
+    <blockquote>
+
+      <h2><span class="kod">Katı Eşitlik (===)</span> Operatörüyle Karşılaştırma (Comparison)</h2>
+
+      xxx
+
+      <br><br>
+
+      <center>Şöyle bir kodumuz olsun:</center>
+
+      <!-- "pibb" uzantılı çekiyoruz ki .js uzantılı dosya aslında HTML olarak görüntülenebilsin-->
+      <iframe src="https://gist.github.com/periakteon/e9c989606540c49d7503add07f3d8751.pibb"
+        style="width: 100%; height: 180px; border: 0;" scrolling="no">
+      </iframe>
+
+      xxx
+
+      <center><strong class="challenge">challenge</strong></center>
+
+      1) xxx
+
+      <iframe src="https://gist.github.com/periakteon/7c1c9ecaed5628b9cdc93944df1c2c04.pibb"
+        style="width: 100%; height: 315px; border: 0;" scrolling="no"></iframe>
+
+    </blockquote>
+    <hr>
+
+    <!-- Strict Equality -->
+    <blockquote>
+
+      <h2><span class="kod">Katı Eşitlik (===)</span> Operatörüyle Karşılaştırma (Comparison)</h2>
+
+      xxx
+
+      <br><br>
+
+      <center>Şöyle bir kodumuz olsun:</center>
+
+      <!-- "pibb" uzantılı çekiyoruz ki .js uzantılı dosya aslında HTML olarak görüntülenebilsin-->
+      <iframe src="https://gist.github.com/periakteon/e9c989606540c49d7503add07f3d8751.pibb"
+        style="width: 100%; height: 180px; border: 0;" scrolling="no">
+      </iframe>
+
+      xxx
+
+      <center><strong class="challenge">challenge</strong></center>
+
+      1) xxx
+
+      <iframe src="https://gist.github.com/periakteon/7c1c9ecaed5628b9cdc93944df1c2c04.pibb"
+        style="width: 100%; height: 315px; border: 0;" scrolling="no"></iframe>
+
+    </blockquote>
+    <hr>
+
+    <!-- Footer -->
+    <div class="pages">
+      <a href="7.html" class="previous">&laquo; Önceki Sayfa</a>
+      <a href="9.html" class="next">Sonraki Sayfa &raquo;</a>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

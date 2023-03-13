@@ -185,4 +185,19 @@ iframe {
   margin: 2rem 0 2rem 0;
   box-shadow: none !important;
   border: none;
+  overflow: hidden;
+}
+
+.challenge::before {
+  content: "⚔⚔⚔⚔⚔⚔⚔⚔⚔⚔";
+  position: relative;
+  margin: 30px 0 0 0;
+  display: block;
+}
+
+.challenge::after {
+  content: "⚔⚔⚔⚔⚔⚔⚔⚔⚔⚔";
+  position: relative;
+  margin: 0 0 30px 0;
+  display: block;
 }

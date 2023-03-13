@@ -22,7 +22,7 @@
 
       Bir <span class="kod">fonksiyon</span>, <span class="kod">return</span> ifadesini içerebilir ancak içermesi
       zorunlu değildir. <span class="kod">Fonksiyon</span>un bir <span class="kod">return</span> ifadesini içermemesi
-      durumunda ve <span class="kod">fonksiyon</span> çağrıldığından, <span class="kod">fonksiyon</span> içteki kodu
+      durumunda ve <span class="kod">fonksiyon</span> çağrıldığında, <span class="kod">fonksiyon</span> içteki kodu
       işler ancak döndürülen (<em>returned</em>) değer <span class="kod">undefined</span>'dır.
 
       <p id="kodblok" class="kodblok">
@@ -93,26 +93,63 @@
 
       <h2>Kuyrukta/Sırada Beklemek (Stand in Line)</h2>
 
-      Bilgisayar Bilimlerinde <span class="kod">kuyruk/sıra</span> (<em>queue</em>) , öğelerin bir sıra içerisinde tutulduğu soyut bir <em>Veri Yapısı</em>dır (<em>Data Structure</em>). Yeni öğeler kuyruğun arkasına eklenir ve eski öğeler de kuyruğun önünden çıkarılır. Şu koda bakalım:
+      Bilgisayar Bilimlerinde <span class="kod">kuyruk/sıra</span> (<em>queue</em>) , öğelerin bir sıra içerisinde
+      tutulduğu soyut bir <em>Veri Yapısı</em>dır (<em>Data Structure</em>). Yeni öğeler kuyruğun arkasına eklenir ve
+      eski öğeler de kuyruğun önünden çıkarılır. Şu koda bakalım:
 
       <!-- "pibb" uzantılı çekiyoruz ki .js uzantılı dosya aslında HTML olarak görüntülenebilsin-->
       <iframe src="https://gist.github.com/periakteon/7b50ff6ab432540c81565c150dc1bf3d.pibb"
         style="width: 100%; height: 320px; border: 0;">
       </iframe>
 
-      <span class="kod">Kuyruk</span>ta bekleme mantığını daha iyi anlamak için şöyle bir kod yazalım: <span class="kod">nextInLine</span> adında bir <span class="kod">fonksiyon</span> yazalım ve bu <span class="kod">fonksiyon</span>,
+      <span class="kod">Kuyruk</span>ta bekleme mantığını daha iyi anlamak için şöyle bir kod yazalım: <span
+        class="kod">nextInLine</span> adında bir <span class="kod">fonksiyon</span> yazalım ve bu <span
+        class="kod">fonksiyon</span>,
       <br><br>
 
-      1) <span class="kod">arr</span> adında bir <span class="kod">array</span> ve <span class="kod">item</span> adında bir <span class="kod">sayı</span>yı <span class="kod">argüman</span> olarak alsın.
+      1) <span class="kod">arr</span> adında bir <span class="kod">array</span> ve <span class="kod">item</span> adında
+      bir <span class="kod">sayı</span>yı <span class="kod">argüman</span> olarak alsın.
       <br><br>
-      2) Daha sonra <span class="kod">array</span>'in içerisine bir <span class="kod">sayı</span> ekleyelim ve daha sonra da <span class="kod">array</span> içerisindeki ilk elemanı silelim.
+      2) Daha sonra <span class="kod">array</span>'in içerisine bir <span class="kod">sayı</span> ekleyelim ve daha
+      sonra da <span class="kod">array</span> içerisindeki ilk elemanı silelim.
       <br><br>
       3) Silinen ilk elemanı da ayrıca döndürelim.
       <iframe src="https://gist.github.com/periakteon/1a13f67f767bc71ba57d594bf05f9e59.pibb"
-      style="width: 100%; height: 500px; border: 0;">
-    </iframe>
+        style="width: 100%; height: 500px; border: 0;">
+      </iframe>
     </blockquote>
     <hr>
+
+    <!-- Boolean Values -->
+    <blockquote>
+
+      <h2><span class="kod">Boolean Values</span>'u Anlamak</h2>
+
+      Bir başka veri türü de <span class="kod">Boolean</span>'dır. <span class="kod">Boolean</span>'lar yalnızca iki değerden biri olabilir: <span class="kod">true</span> ya da <span class="kod">false</span>. Bunlar temelde <span class="kod">true</span>'nun <strong>açık</strong>, <span class="kod">false</span>'un <strong>kapalı</strong> olduğu küçük açma-kapama anahtarlarıdır. Bu iki hâl birbirini dışlar (yani, ya ... ya da ... mantığı geçerlidir).
+
+      <br><br>
+      <strong>NOT:</strong> <span class="kod">Boolean</span> değerleri asla tırnak işaretleriyle yazılmaz. <span class="kod">"true"</span> ve <span class="kod">"false"</span> şeklindeki <span class="kod">string</span>ler <span class="kod">Boolean</span> değildir ve JavaScript'te özel bir anlamı yoktur.
+      
+      <br><br>
+
+      Şöyle bir kodumuz olsun:
+      <!-- "pibb" uzantılı çekiyoruz ki .js uzantılı dosya aslında HTML olarak görüntülenebilsin-->
+      <iframe src="https://gist.github.com/periakteon/45020dc292d8057f5bef62d8448b3973.pibb"
+        style="width: 100%; height: 220px; border: 0;">
+      </iframe>
+
+      <center><strong class="challenge">challenge</strong></center>
+      <br>
+
+      1) <span class="kod">welcomeToBooleans</span> adındaki fonksiyonu <span class="kod">false</span> yerine <span class="kod">true</span> döndürecek şekilde değiştirin.
+
+      <iframe src="https://gist.github.com/periakteon/4455fde2217660a142499f622250dafd.pibb"
+        style="width: 100%; height: 175px; border: 0;">
+      </iframe>
+
+    </blockquote>
+    <hr>
+
     <!-- Footer -->
     <div class="pages">
       <a href="6.html" class="previous">&laquo; Önceki Sayfa</a>
