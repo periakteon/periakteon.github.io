@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>7. Sayfa / JavaScript Notlarım</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>JavaScript Notlarım</h1>
+    <hr>
+
+    <!-- returned Undefined Value -->
+    <blockquote>
+
+      <h2>Bir <span class="kod">Fonskiyon</span>dan Dönen <span class="kod">Undefined Value</span>'yu Anlamak</h2>
+
+      Bir <span class="kod">fonksiyon</span>, <span class="kod">return</span> ifadesini içerebilir ancak içermesi
+      zorunlu değildir. <span class="kod">Fonksiyon</span>un bir <span class="kod">return</span> ifadesini içermemesi
+      durumunda ve <span class="kod">fonksiyon</span> çağrıldığından, <span class="kod">fonksiyon</span> içteki kodu
+      işler ancak döndürülen (<em>returned</em>) değer <span class="kod">undefined</span>'dır.
+
+      <p id="kodblok" class="kodblok">
+        let sum = 0;
+        <br><br>
+        function addSum(num) {
+        <br>
+        sum = sum + num;
+        <br>
+        }
+        <br><br>
+        addSum(3);
+      </p>
+
+      Buradaki <span class="kod">addSum</span> esas itibariyle <span class="kod">return</span> ifadesi içermeyen bir
+      <span class="kod">fonksiyon</span>dur. Bu <span class="kod">fonksiyon</span>, <span class="kod">global</span> bir
+      scope'a sahip olan <span class="kod">sum</span> değişkeninin değerini değiştirecek fakat <span
+        class="kod">returned value</span> ise <span class="kod">undefined</span> olacaktır (çünkü <span
+        class="kod">fonksiyon</span> içerisinde <span class="kod">return</span> ifadesi kullanılmamıştır).
+
+    </blockquote>
+    <hr>
+
+    <!-- Returned Value'yu Atamak -->
+    <blockquote>
+
+      <h2><span class="kod">Returned Value</span>'yu Atamak</h2>
+
+      Değişken Tanımlama dersindeki tartışmamızdan hatırlayacağımız gibi, eşittir (<span class="kod">=</span>)işaretinin
+      sağındaki her şey değer atanmadan <strong>önce</strong> işlem görür. Bu, bir <span class="kod">fonksiyon</span>un
+      dönüş değerini alıp bir değişkene atayabileceğimiz anlamına gelir.
+
+      <br><br>
+
+      İki sayıyı toplayan bir toplam <span class="kod">fonksiyonu</span>u tanımladığımızı varsayalım.
+
+      <p id="kodblok" class="kodblok">
+        ourSum = sum(5,12);
+      </p>
+
+      <span class="kod">sum</span> adındaki fonksiyona iki argüman, yani <span class="kod">5</span> ve <span
+        class="kod">12</span> verdiğimizde alacağımız <span class="kod">return value</span> esasen <span
+        class="kod">17</span>'dir. Bu <span class="kod">returned value</span> de <span class="kod">ourSum</span>
+      adındaki değişkenimize atanır (<span class="kod">=</span> operatörünün sağındaki işlemlerin <strong>daha
+        önce</strong> işlem ördüğünü yukarıda belirttik).
+
+      <p id="kodblok" class="kodblok">
+        let processed = 0;
+        <br><br>
+        function processArg(num) {
+        <br>
+        return (num + 3) / 5;
+        <br>
+        }
+        <br><br>
+        processed = processArg(7);
+        <br><br>
+        console.log(processed);
+        <br><br>
+        >>> 2
+      </p>
+
+    </blockquote>
+    <hr>
+
+    <!-- Stand in Line -->
+    <blockquote>
+
+      <h2>Kuyrukta/Sırada Beklemek (Stand in Line)</h2>
+
+      Bilgisayar Bilimlerinde <span class="kod">kuyruk/sıra</span> (<em>queue</em>) , öğelerin bir sıra içerisinde tutulduğu soyut bir <em>Veri Yapısı</em>dır (<em>Data Structure</em>). Yeni öğeler kuyruğun arkasına eklenir ve eski öğeler de kuyruğun önünden çıkarılır. Şu koda bakalım:
+
+      <!-- "pibb" uzantılı çekiyoruz ki .js uzantılı dosya aslında HTML olarak görüntülenebilsin-->
+      <iframe src="https://gist.github.com/periakteon/7b50ff6ab432540c81565c150dc1bf3d.pibb"
+        style="width: 100%; height: 320px; border: 0;">
+      </iframe>
+
+      <span class="kod">Kuyruk</span>ta bekleme mantığını daha iyi anlamak için şöyle bir kod yazalım: <span class="kod">nextInLine</span> adında bir <span class="kod">fonksiyon</span> yazalım ve bu <span class="kod">fonksiyon</span>,
+      <br><br>
+
+      1) <span class="kod">arr</span> adında bir <span class="kod">array</span> ve <span class="kod">item</span> adında bir <span class="kod">sayı</span>yı <span class="kod">argüman</span> olarak alsın.
+      <br><br>
+      2) Daha sonra <span class="kod">array</span>'in içerisine bir <span class="kod">sayı</span> ekleyelim ve daha sonra da <span class="kod">array</span> içerisindeki ilk elemanı silelim.
+      <br><br>
+      3) Silinen ilk elemanı da ayrıca döndürelim.
+      <iframe src="https://gist.github.com/periakteon/1a13f67f767bc71ba57d594bf05f9e59.pibb"
+      style="width: 100%; height: 500px; border: 0;">
+    </iframe>
+    </blockquote>
+    <hr>
+    <!-- Footer -->
+    <div class="pages">
+      <a href="6.html" class="previous">&laquo; Önceki Sayfa</a>
+      <a href="8.html" class="next">Sonraki Sayfa &raquo;</a>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
