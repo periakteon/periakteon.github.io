@@ -103,7 +103,10 @@ blockquote {
   font-family: Open Sans;
   color: #555555;
   padding: 1.2em 30px 1.2em 75px;
+  border-top: 3px solid rgb(100, 92, 187, 70%);
+  border-bottom: 3px solid rgb(100, 92, 187, 70%);
   border-left: 8px solid rgb(100, 92, 187);
+  border-right: 3px solid rgb(100, 92, 187, 70%);
   line-height: 1.6;
   position: relative;
   background: rgba(255, 255, 255, 0.8);
@@ -120,6 +123,8 @@ blockquote hr {
 .kod {
   color: darkblue;
   font-family: 'Source Code Pro', monospace;
+  background-color: #e2e9f9;
+  border-radius: 5px;
 }
 
 .kodblok {
@@ -200,4 +205,8 @@ iframe {
   position: relative;
   margin: 0 0 30px 0;
   display: block;
+}
+
+.challenge-title {
+  font-size: 40px;
 }
