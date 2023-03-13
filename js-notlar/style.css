@@ -179,6 +179,7 @@ table>tbody>tr:nth-child(odd)>td, table>tbody>tr:nth-child(odd)>th {
   background-color: #dfdfe2;
 }
 
+/* for iframe code snippets */
 iframe {
   display: block;
   margin: 2rem 0 2rem 0;
